@@ -1,12 +1,18 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React from 'react';
 import './App.css';
+import Home from './Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        AMAZON CLONE WAHAHA
-      </header>
+    <div className="app">
+    <Router>
+      <Switch>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
     </div>
   );
 }
