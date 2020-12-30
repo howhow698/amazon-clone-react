@@ -1,0 +1,73 @@
+@import './stylesheets/variables.scss';
+
+.header {
+   background-color: $primary-color-1;
+   color: $primary-color-2;
+   display: flex;
+   align-items: center;
+   position: sticky;
+}
+
+.header__logo {
+   padding: 6px;
+   height: 40px;
+   width: auto;
+   margin: 10px 10px 0;
+}
+
+.header__search {
+   display: flex;
+   flex: 1;
+   align-items: center;
+}
+
+.header__searchInput {
+   padding: 10px;
+   height: 12px;
+   border: none;
+   width: 100%;
+   border-radius: 5px 0 0 5px;
+}
+
+.header__searchIcon {
+   color: $primary-color-1;
+   background-color: $primary-color-3;
+   padding: 4px;
+   border-radius: 0 5px 5px 0;
+   cursor: pointer;
+   &:hover {
+      background-color: $secondary-color-1;
+   }
+}
+
+.header__nav {
+   display: flex;
+   justify-content: space-evenly;
+   margin: 0 10px;
+}
+
+.header__option {
+   display: flex;
+   flex-direction: column;
+   padding: 6px;
+
+   & .header__optionLineOne {
+      font-size: 12px;
+   }
+
+   & .header__optionLineTwo {
+      font-size: 14px;
+      font-weight: bold;
+   }
+}
+
+.header__optionShopCart {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   padding: 6px;
+   & .header__optionShopCartCount {
+      margin-left: 10px;
+      font-weight: bold;
+   }
+}
