@@ -1,0 +1,18 @@
+@import './stylesheets/variables.scss';
+
+.checkout {
+  display: flex;
+  padding: 20px;
+  height: fit-content;
+  background-color: $primary-color-2;
+}
+
+.checkout__ad {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.checkout__title {
+  margin: 15px;
+  border-bottom: 2px solid $primary-color-4;
+}
