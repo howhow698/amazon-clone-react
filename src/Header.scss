@@ -61,6 +61,14 @@
    }
 }
 
+.header__optionShopCartLink {
+   color: inherit;
+   text-decoration: none;
+   &:hover {
+      color: $secondary-color-1;
+   }
+}
+
 .header__optionShopCart {
    display: flex;
    flex-direction: row;
