@@ -3,16 +3,18 @@
 .checkout {
   display: flex;
   padding: 20px;
-  height: fit-content;
+  height: max-content;
   background-color: $primary-color-2;
 }
 
 .checkout__ad {
   width: 100%;
   margin-bottom: 20px;
+  border-radius: 5px;
 }
 
 .checkout__title {
   margin: 15px;
+  padding: 10px;
   border-bottom: 2px solid $primary-color-4;
 }
