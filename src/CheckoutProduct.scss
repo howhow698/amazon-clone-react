@@ -1,0 +1,51 @@
+@import './stylesheets/variables.scss';
+
+.checkoutProduct {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+}
+
+.checkoutProduct__img {
+  width: 180px;
+  height: 180px;
+  margin: 10px;
+  object-fit: contain;
+}
+
+.checkoutProduct__info {
+  display: flex;
+  flex-direction: column;
+
+  & .checkoutProduct__price {
+    margin-top: 6px;
+  }
+
+  & .checkoutProduct__rating {
+    display: flex;
+    flex-direction: row;
+    & .checkoutProduct__ratingIcon {
+      margin: 2px;
+    }
+  }
+
+  & .checkoutProduct__btn {
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    background-color: $primary-color-6;
+    color: $primary-color-5;
+    padding: 6px 10px;
+    margin-top: 15px;
+    width: 250px;
+    &:hover {
+      background-color: $secondary-color-4;
+      font-weight: bold;
+    }
+    &:active {
+      background-color: $secondary-color-3;
+    }
+  } 
+}
