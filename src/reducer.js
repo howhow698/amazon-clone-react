@@ -23,13 +23,7 @@ const reducer = (state, action) => {
     case ActionType.REMOVE_FROM_CART:
       const index = state.cartList.findIndex((item) => item.id === action.id);
       let newCartList = [...state.cartList];
-
-      if (index >= 0) {
-        newCartList.splice(index, 1);
-      } else {
-        console.warn(`Can't remove product (id: ${action.id}) as its not in shopping cart.`);
-      }
-
+      removeFromCart(index, newCartList, action);
       return {...state, cartList: newCartList};
 
     case ActionType.SET_USER:
@@ -40,6 +34,14 @@ const reducer = (state, action) => {
 
     default:
       return state;
+  }
+}
+
+function removeFromCart(index, newCartList, action) {
+  if (index >= 0) {
+    newCartList.splice(index, 1);
+  } else {
+    console.warn(`Can't remove product (id: ${action.id}) as its not in shopping cart.`);
   }
 }
 
