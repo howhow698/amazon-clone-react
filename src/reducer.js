@@ -7,14 +7,20 @@ export const getCartListTotal = (cartList) => {
   return cartList?.reduce((amount, item) => item.price + amount, 0);
 }
 
+export const ActionType = {
+  ADD_TO_CART: "ADD_TO_CART",
+  REMOVE_FROM_CART: "REMOVE_FROM_CART",
+  SET_USER: "SET_USER"
+}
+
 const reducer = (state, action) => {
   switch(action.type) {
-    case "ADD_TO_CART":
+    case ActionType.ADD_TO_CART:
       return {
         ...state,
         cartList: [...state.cartList, action.item],
       }
-    case "REMOVE_FROM_CART":
+    case ActionType.REMOVE_FROM_CART:
       const index = state.cartList.findIndex((item) => item.id === action.id);
       let newCartList = [...state.cartList];
 
@@ -25,6 +31,12 @@ const reducer = (state, action) => {
       }
 
       return {...state, cartList: newCartList};
+
+    case ActionType.SET_USER:
+      return {
+        ...state,
+        user: action.user
+      }
 
     default:
       return state;
