@@ -1,0 +1,90 @@
+@import './stylesheets/variables.scss';
+
+.login {
+  display: flex;
+}
+
+.login__left {
+  background-color: $primary-color-1;
+  height: 100vh;
+  width: 45vw;
+  position: relative;
+  & .login__logo {
+    width: 200px;
+    max-width: 250px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.login__right {
+  width: 55vw;
+  position: relative;
+}
+
+.login__info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  width: 360px;
+  & .login__title {
+    margin: 10px;
+    text-align: center;
+    color: $primary-color-1;
+  }
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  line-height: 2;
+  & input {
+    padding: 6px;
+  }
+}
+
+.login__btn {
+  margin: 15px 0;
+  padding: 6px;
+  font-size: 16px;
+  background-color: $primary-color-3;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  &:hover {
+    background-color: $secondary-color-1;
+  }
+  &:active {
+    background-color: $secondary-color-2;
+  }
+}
+
+.login__caution {
+  margin: 15px 0;
+  padding: 6px;
+  line-height: 1.4;
+  border-radius: 6px;
+}
+
+.login__registerBtn {
+  width: 360px;
+  padding: 6px;
+  font-size: 16px;
+  background-color: $primary-color-4;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  &:hover {
+    background-color: $secondary-color-5;
+  }
+  &:active {
+    background-color: $secondary-color-6;
+  }
+}

@@ -50,6 +50,17 @@
    margin: 0 10px;
 }
 
+.header__login {
+   text-decoration: none;
+   color: inherit;
+   &:hover {
+      color: $secondary-color-1;
+   }
+   &:active {
+      color: $secondary-color-2;
+   }
+}
+
 .header__option {
    display: flex;
    flex-direction: column;
